@@ -1,12 +1,14 @@
 for (let i=1; i<=100; i++){
-    if (i%15 === 0){
-        console.log("FizzBuzz");
-        if (! i % 5 === 0){
-            console.log("Fizz");
-        }
-        if (! i % 3 === 0){
-            console.log("Buzz");
-        }
+    let answer = ''
+    if (i % 3 === 0){
+        answer += 'Fizz'
     }
-    else console.log(i)
+    if (i % 5 === 0){
+        answer += 'Buzz'
+    }
+    // check if empty
+    if (!answer) {
+        answer = i
+    }
+    console.log(answer);
 }
