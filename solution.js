@@ -31,9 +31,6 @@ for (let i=1; i<=100; i++){
             answer = answer.slice(0, index) + 'Fezz' + answer.slice(index);
         }
     }
-    if (i % 17 === 0){
-
-    }
     // check if empty
     if (!answer) answer = i;
     console.log(answer);
