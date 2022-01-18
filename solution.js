@@ -20,13 +20,19 @@ for (let i=1; i<=100; i++){
         answer = 'Bong';
     }
     if (i % 13 === 0){
+        // find 'B'
         let index = answer.indexOf('B');
+        // if there's no 'B' word, put 'Fezz' on the end
         if (index < 0){
-            answer = answer + 'Fezz';
+            answer += 'Fezz';
         }
+        // otherwise, insert 'Fezz' before the 'B' word
         else {
             answer = answer.slice(0, index) + 'Fezz' + answer.slice(index);
         }
+    }
+    if (i % 17 === 0){
+
     }
     // check if empty
     if (!answer) answer = i;
