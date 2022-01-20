@@ -2,6 +2,10 @@ function isDivisibleBy(a, b){
     return a%b === 0;
 }
 
+function startsWithB(s){
+    return s.startsWith('B');
+}
+
 for (let i=1; i<=255; i++){
     let answer = [];
     if (isDivisibleBy(i, 3)){
@@ -17,7 +21,11 @@ for (let i=1; i<=255; i++){
         answer = ['Bong'];
     }
     if (isDivisibleBy(i, 13)){
-        /// TO DO
+        answer.splice(
+            answer.findIndex(startsWithB),
+            0,
+            'Fezz'
+        );
     }
 
     if (isDivisibleBy(i, 17)){
