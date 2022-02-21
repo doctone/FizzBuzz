@@ -8,7 +8,7 @@ namespace FizzBuzz
         {
             var fizzbuzzer = new FizzBuzzer();
 
-            for (int i=1; i<=150; i++){
+            for (int i=1; i<=256; i++){
                Console.WriteLine(fizzbuzzer.FizzBuzz(i));
             }
         }
