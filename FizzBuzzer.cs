@@ -9,24 +9,24 @@ namespace FizzBuzz
         }
         public string FizzBuzz(int number)
         {
-            string output = "";
+            List<string> output = new List<string>();
 
             if (IsDivisibleBy(number, 3)){
-                output += "Fizz";
+                output.Add("Fizz");
             }
             if (IsDivisibleBy(number, 5)){
-                output += "Buzz";
+                output.Add("Buzz");
             }
             if (IsDivisibleBy(number, 7)){
-                output += "Bang";
+                output.Add("Bang");
             }
             if (IsDivisibleBy(number, 11)){
-                output = "Bong";
+                output.Add("Bong");
             }
-            if (output == ""){
-                output += number.ToString();
+            if (output.Count == 0){
+                output.Add(number.ToString());
             }
-            return output;
+            return String.Join("", output.ToArray());
         }
     }
 }
