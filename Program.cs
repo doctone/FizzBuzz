@@ -6,21 +6,11 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            for (int i=1; i<=100; i++){
-                string output = "";
+            var fizzbuzzer = new FizzBuzzer();
 
-                if (i % 3 == 0){
-                    output += "Fizz";
-                }
-                if (i % 5 == 0){
-                    output += "Buzz";
-                }
-                if (output == ""){
-                    output += i.ToString();
-                }
-                Console.WriteLine(output);
+            for (int i=1; i<=100; i++){
+               Console.WriteLine(fizzbuzzer.FizzBuzz(i));
             }
         }
     }
-
 }
