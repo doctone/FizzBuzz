@@ -11,6 +11,7 @@ namespace FizzBuzz
                 new DivisibleRule(3, "Fizz"),
                 new DivisibleRule(5, "Buzz"),
                 new DivisibleRule(7, "Bang"),
+                new ReplaceWith(11, "Bong"),
             };
 
             var fizzbuzzer = new FizzBuzzer(rules);
