@@ -1,18 +1,40 @@
-for (let i=1; i<=100; i++){
-    let answer = '';
-    if (i % 3 === 0){
-        answer += 'Fizz';
+function isDivisibleBy(a, b){
+    return a%b === 0;
+}
+
+function startsWithB(s){
+    return s.startsWith('B');
+}
+
+for (let i=1; i<=255; i++){
+    let answer = [];
+    if (isDivisibleBy(i, 3)){
+        answer.push('Fizz');
     }
-    if (i % 5 === 0){
-        answer += 'Buzz';
+    if (isDivisibleBy(i, 5)){
+        answer.push('Buzz');
     }
-    if ( i % 7 === 0){
-        answer += 'Bang';
+    if (isDivisibleBy(i, 7)){
+        answer.push('Bang');
     }
-    if (i % 11 === 0){
-        answer = 'Bong';
+    if (isDivisibleBy(i, 11)){
+        answer = ['Bong'];
     }
+    if (isDivisibleBy(i, 13)){
+        answer.splice(
+            answer.findIndex(startsWithB),
+            0,
+            'Fezz'
+        );
+    }
+
+    if (isDivisibleBy(i, 17)){
+        answer.reverse();
+    }
+
     // check if empty
-    if (!answer) answer = i;
-    console.log(answer);
+    if (!answer.length) {
+        answer = [i.toString()];
+    }
+    console.log(answer.join(''));
 }
