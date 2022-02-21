@@ -18,7 +18,7 @@ namespace FizzBuzz
                 output += "Buzz";
             }
             if (isDivisibleBy(number, 7)){
-                output += "Bong";
+                output += "Bang";
             }
             if (output == ""){
                 output += number.ToString();
