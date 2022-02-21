@@ -4,14 +4,17 @@ namespace FizzBuzz
 {
     public class FizzBuzzer
     {
+        static bool isDivisibleBy(int a, int b){
+            return a % b == 0;
+        }
         public string FizzBuzz(int number)
         {
             string output = "";
 
-            if (number % 3 == 0){
+            if (isDivisibleBy(number, 3)){
                 output += "Fizz";
             }
-            if (number % 5 == 0){
+            if (isDivisibleBy(number, 5)){
                 output += "Buzz";
             }
             if (output == ""){
