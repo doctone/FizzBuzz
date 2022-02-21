@@ -17,6 +17,9 @@ namespace FizzBuzz
             if (isDivisibleBy(number, 5)){
                 output += "Buzz";
             }
+            if (isDivisibleBy(number, 7)){
+                output += "Bong";
+            }
             if (output == ""){
                 output += number.ToString();
             }
