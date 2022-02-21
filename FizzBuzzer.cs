@@ -13,6 +13,9 @@ namespace FizzBuzz
         public string FizzBuzz(int number)
         {
             List<string> output = new List<string>();
+            if (IsDivisibleBy(number, 13)){
+                output.Add("Fezz");
+            }
 
             if (IsDivisibleBy(number, 3)){
                 output.Add("Fizz");
